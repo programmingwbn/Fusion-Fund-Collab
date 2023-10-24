@@ -5,13 +5,25 @@ const SalesChart = () => {
   const chartoptions = {
     series: [
       {
-        name: "Iphone 13",
+        name: "OpenAI",
         data: [0, 31, 40, 28, 51, 42, 109, 100],
       },
       {
-        name: "Oneplue 9",
+        name: "Facebook",
         data: [0, 11, 32, 45, 32, 34, 52, 41],
       },
+      {
+        name: "Company #3",
+        data: [0, 4, 21, 30, 38, 41, 44, 55],
+      },
+      {
+        name: "Company #4",
+        data: [0, 17, 21, 26, 47, 59, 76, 84],
+      },
+      {
+        name: "Company #5",
+        data: [0, 7, 11, 15, 39, 51, 67, 80],
+      }
     ],
     options: {
       chart: {

@@ -11,47 +11,36 @@ import {
 
 const FeedData = [
   {
-    title: "Cras justo odio",
+    title: "OpenAI",
     icon: "bi bi-bell",
     color: "primary",
-    date: "6 minute ago",
+    date: "2 days ago",
   },
   {
-    title: "New user registered.",
+    title: "Facebook",
     icon: "bi bi-person",
     color: "info",
-    date: "6 minute ago",
+    date: "3 days ago",
   },
   {
-    title: "Server #1 overloaded.",
+    title: "Company #3",
     icon: "bi bi-hdd",
     color: "danger",
-    date: "6 minute ago",
+    date: "5 days ago",
   },
   {
-    title: "New order received.",
+    title: "Company #4",
     icon: "bi bi-bag-check",
     color: "success",
-    date: "6 minute ago",
+    date: "7 days ago",
   },
   {
-    title: "Cras justo odio",
+    title: "Company #5",
     icon: "bi bi-bell",
     color: "dark",
-    date: "6 minute ago",
+    date: "8 days ago",
   },
-  {
-    title: "Server #1 overloaded.",
-    icon: "bi bi-hdd",
-    color: "warning",
-    date: "6 minute ago",
-  },
-  {
-    title: "Server #1 overloaded.",
-    icon: "bi bi-hdd",
-    color: "danger",
-    date: "6 minute ago",
-  },
+
 ];
 
 const Feeds = () => {
@@ -60,7 +49,7 @@ const Feeds = () => {
       <CardBody>
         <CardTitle tag="h5">Feeds</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">
-          Widget you can use
+          Recent updates on companies
         </CardSubtitle>
         <ListGroup flush className="mt-4">
           {FeedData.map((feed, index) => (
