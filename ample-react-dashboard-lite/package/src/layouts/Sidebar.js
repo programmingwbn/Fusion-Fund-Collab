@@ -9,44 +9,29 @@ const navigation = [
     icon: "bi bi-speedometer2",
   },
   {
-    title: "Alert",
+    title: "Company #1",
     href: "/alerts",
     icon: "bi bi-bell",
   },
   {
-    title: "Badges",
+    title: "Company #2",
     href: "/badges",
     icon: "bi bi-patch-check",
   },
   {
-    title: "Buttons",
+    title: "Company #3",
     href: "/buttons",
     icon: "bi bi-hdd-stack",
   },
   {
-    title: "Cards",
+    title: "Company #4",
     href: "/cards",
     icon: "bi bi-card-text",
   },
   {
-    title: "Grid",
+    title: "Company #5",
     href: "/grid",
     icon: "bi bi-columns",
-  },
-  {
-    title: "Table",
-    href: "/table",
-    icon: "bi bi-layout-split",
-  },
-  {
-    title: "Forms",
-    href: "/forms",
-    icon: "bi bi-textarea-resize",
-  },
-  {
-    title: "Breadcrumbs",
-    href: "/breadcrumbs",
-    icon: "bi bi-link",
   },
   {
     title: "About",
@@ -91,15 +76,7 @@ const Sidebar = () => {
               </Link>
             </NavItem>
           ))}
-          <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/ample-react-dashboard/?ref=33"
-          >
-            Upgrade To Pro
-          </Button>
+
         </Nav>
       </div>
     </div>
