@@ -1,191 +1,140 @@
-import { Badge, Button, Card, CardBody, CardTitle, Row, Col } from "reactstrap";
+import React, { useState } from "react";
+import {
+  Alert,
+  UncontrolledAlert,
+  Card,
+  CardBody,
+  CardTitle,
+} from "reactstrap";
 
-const Badges = () => {
+const Companytwo = () => {
+  // For Dismiss Button with Alert
+  const [visible, setVisible] = useState(true);
+
+  const onDismiss = () => {
+    setVisible(false);
+  };
+
   return (
     <div>
       {/* --------------------------------------------------------------------------------*/}
-      {/* Row*/}
+      {/* Card-1*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Row>
-        <Col xs="12" md="12" sm="12">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-1*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Badges
-            </CardTitle>
-            <CardBody className="">
-              <div>
-                <h1>
-                  Heading <Badge color="secondary">New</Badge>
-                </h1>
-                <h2>
-                  Heading <Badge color="secondary">New</Badge>
-                </h2>
-                <h3>
-                  Heading <Badge color="secondary">New</Badge>
-                </h3>
-                <h4>
-                  Heading <Badge color="secondary">New</Badge>
-                </h4>
-                <h5>
-                  Heading <Badge color="secondary">New</Badge>
-                </h5>
-                <h6>
-                  Heading <Badge color="secondary">New</Badge>
-                </h6>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="12" sm="12">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-2*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Badges with Button
-            </CardTitle>
-            <CardBody className="">
-              <div>
-                <Button color="primary" outline>
-                  Notifications <Badge color="secondary">1</Badge>
-                </Button>
-                <Button color="secondary" className="ms-3" outline>
-                  Notifications <Badge color="secondary">2</Badge>
-                </Button>
-                <Button color="info" className="ms-3" outline>
-                  Notifications <Badge color="secondary">3</Badge>
-                </Button>
-                <Button color="warning" className="ms-3" outline>
-                  Notifications <Badge color="secondary">4</Badge>
-                </Button>
-                <Button color="danger" className="ms-3" outline>
-                  Notifications <Badge color="secondary">5</Badge>
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-3*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Badges with Contextual variations
-            </CardTitle>
-            <CardBody className="">
-              <div>
-                <Badge color="primary">Primary</Badge>
-                <Badge color="secondary" className="ms-3">
-                  Secondary
-                </Badge>
-                <Badge color="success" className="ms-3">
-                  Success
-                </Badge>
-                <Badge color="danger" className="ms-3">
-                  Danger
-                </Badge>
-                <Badge color="warning" className="ms-3">
-                  Warning
-                </Badge>
-                <Badge color="info" className="ms-3">
-                  Info
-                </Badge>
-                <Badge color="light" className="ms-3">
-                  Light
-                </Badge>
-                <Badge color="dark" className="ms-3">
-                  Dark
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-4*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Badges with Pills
-            </CardTitle>
-            <CardBody className="">
-              <div>
-                <Badge color="primary" pill>
-                  Primary
-                </Badge>
-                <Badge color="secondary" className="ms-3" pill>
-                  Secondary
-                </Badge>
-                <Badge color="success" className="ms-3" pill>
-                  Success
-                </Badge>
-                <Badge color="danger" className="ms-3" pill>
-                  Danger
-                </Badge>
-                <Badge color="warning" className="ms-3" pill>
-                  Warning
-                </Badge>
-                <Badge color="info" className="ms-3" pill>
-                  Info
-                </Badge>
-                <Badge color="light" className="ms-3" pill>
-                  Light
-                </Badge>
-                <Badge color="dark" className="ms-3" pill>
-                  Dark
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-5*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Badges with Links
-            </CardTitle>
-            <CardBody className="">
-              <div>
-                <Badge href="" color="primary">
-                  Primary
-                </Badge>
-                <Badge href="" color="secondary" className="ms-3">
-                  Secondary
-                </Badge>
-                <Badge href="" color="success" className="ms-3">
-                  Success
-                </Badge>
-                <Badge href="" color="danger" className="ms-3">
-                  Danger
-                </Badge>
-                <Badge href="" color="warning" className="ms-3">
-                  Warning
-                </Badge>
-                <Badge href="" color="info" className="ms-3">
-                  Info
-                </Badge>
-                <Badge href="" color="light" className="ms-3">
-                  Light
-                </Badge>
-                <Badge href="" color="dark" className="ms-3">
-                  Dark
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2"> </i>
+          Company #1 info
+        </CardTitle>
+        <CardBody className="">
+          <div className="mt-3">
+            <h3>Replace this with company summary from backend</h3>
+          </div>
+        </CardBody>
+      </Card>
       {/* --------------------------------------------------------------------------------*/}
-      {/* Row*/}
+      {/* Card-2*/}
+      {/* --------------------------------------------------------------------------------*/}
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          company summary #2
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <h3></h3>
+          </div>
+        </CardBody>
+      </Card>
+      {/* --------------------------------------------------------------------------------*/}
+      {/* Card-3*/}
+      {/* --------------------------------------------------------------------------------*/}
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          summary #3
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            {/* <Alert color="success">
+              <h4 className="alert-heading">Well done!</h4>
+              <p>
+                Aww yeah, you successfully read this important alert message.
+                This example text is going to run a bit longer so that you can
+                see how spacing within an alert works with this kind of content.
+              </p>
+              <hr />
+              <p className="mb-0">
+                Whenever you need to, be sure to use margin utilities to keep
+                things nice and tidy.
+              </p>
+            </Alert> */}
+            <h3>add</h3>
+          </div>
+        </CardBody>
+      </Card>
+      {/* --------------------------------------------------------------------------------
+      {/* Card-4*/}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          Alert with Dissmissing
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <Alert color="info" isOpen={visible} toggle={onDismiss.bind(null)}>
+              I am an alert and I can be dismissed!
+            </Alert>
+          </div>
+        </CardBody>
+      </Card> */}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* Card-5*/}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          Alert with Uncontrolled [disable] Alerts
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <UncontrolledAlert color="info">
+              I am an alert and I can be dismissed!
+            </UncontrolledAlert>
+          </div>
+        </CardBody>
+      </Card> */}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* Card-6*/}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          Alerts without fade
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <Alert
+              color="primary"
+              isOpen={visible}
+              toggle={onDismiss.bind(null)}
+              fade={false}
+            >
+              I am a primary alert and I can be dismissed without animating!
+            </Alert>
+            <UncontrolledAlert color="warning" fade={false}>
+              I am an alert and I can be dismissed without animating!
+            </UncontrolledAlert>
+          </div>
+        </CardBody>
+      </Card>  */}
+
+      {/* --------------------------------------------------------------------------------*/}
+      {/* End Inner Div*/}
       {/* --------------------------------------------------------------------------------*/}
     </div>
   );
 };
 
-export default Badges;
+export default Companytwo;
+

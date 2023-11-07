@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "reactstrap";
 
-const Alerts = () => {
+const Companyone = () => {
   // For Dismiss Button with Alert
   const [visible, setVisible] = useState(true);
 
@@ -23,26 +23,11 @@ const Alerts = () => {
       <Card>
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2"> </i>
-          Alert
+          Company #1 info
         </CardTitle>
         <CardBody className="">
           <div className="mt-3">
-            <Alert color="primary">
-              This is a primary alert— check it out!
-            </Alert>
-            <Alert color="secondary">
-              This is a secondary alert— check it out!
-            </Alert>
-            <Alert color="success">
-              This is a success alert— check it out!
-            </Alert>
-            <Alert color="danger">This is a danger alert— check it out!</Alert>
-            <Alert color="warning">
-              This is a warning alert— check it out!
-            </Alert>
-            <Alert color="info">This is a info alert— check it out!</Alert>
-            <Alert color="light">This is a light alert— check it out!</Alert>
-            <Alert color="dark">This is a dark alert</Alert>
+            <h3>Replace this with company summary from backend</h3>
           </div>
         </CardBody>
       </Card>
@@ -52,66 +37,11 @@ const Alerts = () => {
       <Card>
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2" />
-          Alert with Links
+          company summary #2
         </CardTitle>
         <CardBody className="">
           <div>
-            <Alert color="primary">
-              This is a primary alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="secondary">
-              This is a secondary alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="success">
-              This is a success alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="danger">
-              This is a danger alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="warning">
-              This is a warning alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="info">
-              This is a info alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="light">
-              This is a light alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
-            <Alert color="dark">
-              This is a dark alert with
-              <a href="/" className="alert-link">
-                an example link
-              </a>
-              . Give it a click if you like.
-            </Alert>
+            <h3></h3>
           </div>
         </CardBody>
       </Card>
@@ -121,11 +51,11 @@ const Alerts = () => {
       <Card>
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2" />
-          Alert with Additional content
+          summary #3
         </CardTitle>
         <CardBody className="">
           <div>
-            <Alert color="success">
+            {/* <Alert color="success">
               <h4 className="alert-heading">Well done!</h4>
               <p>
                 Aww yeah, you successfully read this important alert message.
@@ -137,14 +67,15 @@ const Alerts = () => {
                 Whenever you need to, be sure to use margin utilities to keep
                 things nice and tidy.
               </p>
-            </Alert>
+            </Alert> */}
+            <h3>add</h3>
           </div>
         </CardBody>
       </Card>
-      {/* --------------------------------------------------------------------------------*/}
+      {/* --------------------------------------------------------------------------------
       {/* Card-4*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Card>
+      {/* <Card>
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2" />
           Alert with Dissmissing
@@ -156,11 +87,11 @@ const Alerts = () => {
             </Alert>
           </div>
         </CardBody>
-      </Card>
+      </Card> */}
       {/* --------------------------------------------------------------------------------*/}
       {/* Card-5*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Card>
+      {/* <Card>
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2" />
           Alert with Uncontrolled [disable] Alerts
@@ -172,11 +103,11 @@ const Alerts = () => {
             </UncontrolledAlert>
           </div>
         </CardBody>
-      </Card>
+      </Card> */}
       {/* --------------------------------------------------------------------------------*/}
       {/* Card-6*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Card>
+      {/* <Card>
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2" />
           Alerts without fade
@@ -196,7 +127,7 @@ const Alerts = () => {
             </UncontrolledAlert>
           </div>
         </CardBody>
-      </Card>
+      </Card>  */}
 
       {/* --------------------------------------------------------------------------------*/}
       {/* End Inner Div*/}
@@ -205,4 +136,4 @@ const Alerts = () => {
   );
 };
 
-export default Alerts;
+export default Companyone;
