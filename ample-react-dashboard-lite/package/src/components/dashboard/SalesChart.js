@@ -1,6 +1,7 @@
 import { Card, CardBody, CardSubtitle, CardTitle } from "reactstrap";
 import Chart from "react-apexcharts";
 import React from "react";
+// import record from "./test.json";
 
 const SalesChart = () => {
   const [chartoptions, setChartData] = React.useState(null);

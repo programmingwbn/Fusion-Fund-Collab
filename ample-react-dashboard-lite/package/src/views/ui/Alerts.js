@@ -6,6 +6,7 @@ import {
   CardBody,
   CardTitle,
 } from "reactstrap";
+import record from "./test.json";
 
 const Companyone = () => {
   // For Dismiss Button with Alert
@@ -20,17 +21,25 @@ const Companyone = () => {
       {/* --------------------------------------------------------------------------------*/}
       {/* Card-1*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Card>
+      
         <CardTitle tag="h6" className="border-bottom p-3 mb-0">
           <i className="bi bi-bell me-2"> </i>
-          Company #1 info
+          {
+          record.map( data => {
+             return(
+              <div key= {data.Model}>
+                <Card><strong>{data.Model}</strong> <br /> {data.Date} <br />
+                {data.Summary_Bart} </Card>
+              </div>
+            )
+})}
         </CardTitle>
         <CardBody className="">
           <div className="mt-3">
             <h3>Replace this with company summary from backend</h3>
           </div>
         </CardBody>
-      </Card>
+      
       {/* --------------------------------------------------------------------------------*/}
       {/* Card-2*/}
       {/* --------------------------------------------------------------------------------*/}
