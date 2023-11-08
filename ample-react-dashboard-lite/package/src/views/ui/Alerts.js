@@ -15,34 +15,37 @@ const Companyone = () => {
   const onDismiss = () => {
     setVisible(false);
   };
-
+  
   return (
     <div>
-  {/* --------------------------------------------------------------------------------*/}
-  {/* Card-1*/}
-  {/* --------------------------------------------------------------------------------*/}
-  <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-    <i className="bi bi-bell me-2"> </i>
-    {record.map((data) => {
-      if (data.Model.includes("OpenAI")) {
-        return (
-          <div key={data.Model}>
-            <Card>
-              <strong>{data.Model}</strong> <br /> {data.Date} <br />
-              {data.Summary_Bart}
-            </Card>
+      {/* --------------------------------------------------------------------------------*/}
+      {/* Card-1*/}
+      {/* --------------------------------------------------------------------------------*/}
+      
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2"> </i>
+          {
+          record.map( data => {if (data.Model == "OpenAI"){             return(
+            <div key= {data.Model}>
+              <Card><strong>{data.Model}</strong> <br /> {data.Date} <br />
+              {data.Summary_Bart} </Card>
+            </div>
+          )}
+          else {
+            return null;
+          }
+
+            
+    
+})}
+          
+        </CardTitle>
+        <CardBody className="">
+          <div className="mt-3">
+            <h3>Replace this with company summary from backend</h3>
           </div>
-        );
-      } else {
-        return null; // If data.Model doesn't include "OpenAI", don't render it
-      }
-    })}
-  </CardTitle>
-  <CardBody className="">
-    <div className="mt-3">
-      <h3>Replace this with company summary from backend</h3>
-    </div>
-  </CardBody>
+        </CardBody>
+      
       {/* --------------------------------------------------------------------------------*/}
       {/* Card-2*/}
       {/* --------------------------------------------------------------------------------*/}
