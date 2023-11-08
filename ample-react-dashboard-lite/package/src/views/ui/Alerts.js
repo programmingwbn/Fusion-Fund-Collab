@@ -18,28 +18,31 @@ const Companyone = () => {
 
   return (
     <div>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* Card-1*/}
-      {/* --------------------------------------------------------------------------------*/}
-      
-        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-          <i className="bi bi-bell me-2"> </i>
-          {
-          record.map( data => {
-             return(
-              <div key= {data.Model}>
-                <Card><strong>{data.Model}</strong> <br /> {data.Date} <br />
-                {data.Summary_Bart} </Card>
-              </div>
-            )
-})}
-        </CardTitle>
-        <CardBody className="">
-          <div className="mt-3">
-            <h3>Replace this with company summary from backend</h3>
+  {/* --------------------------------------------------------------------------------*/}
+  {/* Card-1*/}
+  {/* --------------------------------------------------------------------------------*/}
+  <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+    <i className="bi bi-bell me-2"> </i>
+    {record.map((data) => {
+      if (data.Model.includes("OpenAI")) {
+        return (
+          <div key={data.Model}>
+            <Card>
+              <strong>{data.Model}</strong> <br /> {data.Date} <br />
+              {data.Summary_Bart}
+            </Card>
           </div>
-        </CardBody>
-      
+        );
+      } else {
+        return null; // If data.Model doesn't include "OpenAI", don't render it
+      }
+    })}
+  </CardTitle>
+  <CardBody className="">
+    <div className="mt-3">
+      <h3>Replace this with company summary from backend</h3>
+    </div>
+  </CardBody>
       {/* --------------------------------------------------------------------------------*/}
       {/* Card-2*/}
       {/* --------------------------------------------------------------------------------*/}
