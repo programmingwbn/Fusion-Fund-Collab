@@ -1,286 +1,133 @@
 import React, { useState } from "react";
 import {
-  Button,
-  ButtonGroup,
+  Alert,
+  UncontrolledAlert,
   Card,
   CardBody,
   CardTitle,
-  Row,
-  Col,
 } from "reactstrap";
 
-const Buttons = () => {
-  const [cSelected, setCSelected] = useState([]);
-  const [rSelected, setRSelected] = useState(null);
+const Companythree = () => {
+  // For Dismiss Button with Alert
+  const [visible, setVisible] = useState(true);
 
-  const onRadioBtnClick = (rSelected) => {
-    setRSelected(rSelected);
-  };
-
-  const onCheckboxBtnClick = (selected) => {
-    const index = cSelected.indexOf(selected);
-    if (index < 0) {
-      cSelected.push(selected);
-    } else {
-      cSelected.splice(index, 1);
-    }
-    setCSelected([...cSelected]);
+  const onDismiss = () => {
+    setVisible(false);
   };
 
   return (
     <div>
       {/* --------------------------------------------------------------------------------*/}
-      {/* Start Inner Div*/}
+      {/* Card-1*/}
       {/* --------------------------------------------------------------------------------*/}
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2"> </i>
+          Company #1 info
+        </CardTitle>
+        <CardBody className="">
+          <div className="mt-3">
+            <h3>Replace this with company summary from backend</h3>
+          </div>
+        </CardBody>
+      </Card>
       {/* --------------------------------------------------------------------------------*/}
-      {/* Row*/}
+      {/* Card-2*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Row>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-1*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" color="primary">
-                  primary
-                </Button>
-                <Button className="btn" color="secondary">
-                  secondary
-                </Button>
-                <Button className="btn" color="success">
-                  success
-                </Button>
-                <Button className="btn" color="info">
-                  info
-                </Button>
-                <Button className="btn" color="warning">
-                  warning
-                </Button>
-                <Button className="btn" color="danger">
-                  danger
-                </Button>
-                <Button className="btn" color="link">
-                  link
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-2*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Outline Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" outline color="primary">
-                  primary
-                </Button>
-                <Button className="btn" outline color="secondary">
-                  secondary
-                </Button>
-                <Button className="btn" outline color="success">
-                  success
-                </Button>
-                <Button className="btn" outline color="info">
-                  info
-                </Button>
-                <Button className="btn" outline color="warning">
-                  warning
-                </Button>
-                <Button className="btn" outline color="danger">
-                  danger
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-3*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Large Size Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" color="primary" size="lg">
-                  Large Button
-                </Button>
-                <Button className="btn" color="secondary" size="lg">
-                  Large Button
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-4*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Small Size Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" color="primary" size="sm">
-                  Small Button
-                </Button>
-                <Button className="btn" color="secondary" size="sm">
-                  Small Button
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-6*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Active State Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" color="primary" size="lg" active>
-                  Primary link
-                </Button>
-                <Button className="btn" color="secondary" size="lg" active>
-                  Link
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-7*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Disabled State Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" color="primary" size="lg" disabled>
-                  Primary button
-                </Button>
-                <Button className="btn" color="secondary" size="lg" disabled>
-                  Button
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-5*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Block Buttons
-            </CardTitle>
-            <CardBody className="">
-              <div className="button-group">
-                <Button className="btn" color="primary" size="lg" block>
-                  Block level button
-                </Button>
-                <Button className="btn" color="secondary" size="lg" block>
-                  Block level button
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-6*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Checkbox(Stateful Buttons)
-            </CardTitle>
-            <CardBody className="">
-              <h5>Checkbox Buttons</h5>
-              <ButtonGroup>
-                <Button
-                  color="primary"
-                  onClick={() => onCheckboxBtnClick(1)}
-                  active={cSelected.includes(1)}
-                >
-                  One
-                </Button>
-                <Button
-                  color="primary"
-                  onClick={() => onCheckboxBtnClick(2)}
-                  active={cSelected.includes(2)}
-                >
-                  Two
-                </Button>
-                <Button
-                  color="primary"
-                  onClick={() => onCheckboxBtnClick(3)}
-                  active={cSelected.includes(3)}
-                >
-                  Three
-                </Button>
-              </ButtonGroup>
-              <p className="mb-0">Selected: {JSON.stringify(cSelected)}</p>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="12" md="6">
-          {/* --------------------------------------------------------------------------------*/}
-          {/* Card-6*/}
-          {/* --------------------------------------------------------------------------------*/}
-          <Card>
-            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-              Radio Buttons (Stateful Buttons)
-            </CardTitle>
-            <CardBody className="">
-              <h5>Radio Buttons</h5>
-              <ButtonGroup>
-                <Button
-                  color="primary"
-                  onClick={() => onRadioBtnClick(1)}
-                  active={rSelected === 1}
-                >
-                  One
-                </Button>
-                <Button
-                  color="primary"
-                  onClick={() => onRadioBtnClick(2)}
-                  active={rSelected === 2}
-                >
-                  Two
-                </Button>
-                <Button
-                  color="primary"
-                  onClick={() => onRadioBtnClick(3)}
-                  active={rSelected === 3}
-                >
-                  Three
-                </Button>
-              </ButtonGroup>
-              <p className="mb-0">Selected: {rSelected}</p>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          company summary #2
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <h3></h3>
+          </div>
+        </CardBody>
+      </Card>
       {/* --------------------------------------------------------------------------------*/}
-      {/* Row*/}
+      {/* Card-3*/}
       {/* --------------------------------------------------------------------------------*/}
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          summary #3
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            {/* <Alert color="success">
+              <h4 className="alert-heading">Well done!</h4>
+              <p>
+                Aww yeah, you successfully read this important alert message.
+                This example text is going to run a bit longer so that you can
+                see how spacing within an alert works with this kind of content.
+              </p>
+              <hr />
+              <p className="mb-0">
+                Whenever you need to, be sure to use margin utilities to keep
+                things nice and tidy.
+              </p>
+            </Alert> */}
+            <h3>add</h3>
+          </div>
+        </CardBody>
+      </Card>
+      {/* --------------------------------------------------------------------------------
+      {/* Card-4*/}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          Alert with Dissmissing
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <Alert color="info" isOpen={visible} toggle={onDismiss.bind(null)}>
+              I am an alert and I can be dismissed!
+            </Alert>
+          </div>
+        </CardBody>
+      </Card> */}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* Card-5*/}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          Alert with Uncontrolled [disable] Alerts
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <UncontrolledAlert color="info">
+              I am an alert and I can be dismissed!
+            </UncontrolledAlert>
+          </div>
+        </CardBody>
+      </Card> */}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* Card-6*/}
+      {/* --------------------------------------------------------------------------------*/}
+      {/* <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          <i className="bi bi-bell me-2" />
+          Alerts without fade
+        </CardTitle>
+        <CardBody className="">
+          <div>
+            <Alert
+              color="primary"
+              isOpen={visible}
+              toggle={onDismiss.bind(null)}
+              fade={false}
+            >
+              I am a primary alert and I can be dismissed without animating!
+            </Alert>
+            <UncontrolledAlert color="warning" fade={false}>
+              I am an alert and I can be dismissed without animating!
+            </UncontrolledAlert>
+          </div>
+        </CardBody>
+      </Card>  */}
 
       {/* --------------------------------------------------------------------------------*/}
       {/* End Inner Div*/}
@@ -289,4 +136,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default Companythree;
